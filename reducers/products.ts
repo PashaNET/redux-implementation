@@ -1,10 +1,15 @@
 import { EDIT_PRODUCT } from '../actions/action.types';
 
-export const products = (state, action) => {
+const initialState = {
+    data: [],
+    loading: false,
+    loaded: false
+}
+export const products = (state = initialState, action) => {
     switch(action.type){
         case EDIT_PRODUCT:
             const newProduct = action.payload;
-            return [...state, newProduct]; 
+            return {...state, newProduct}; 
         default: 
             return state;
     }

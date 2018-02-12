@@ -1,6 +1,6 @@
 import { ADD_COMMENT, REMOVE_COMMENT } from './action.types';
 
-export const comments = {
+export const commentActions = {
     addComment(data){
         return {
             type: ADD_COMMENT,
